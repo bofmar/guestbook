@@ -46,6 +46,7 @@ table {
 /* Variables */
 :root {
 	--bg-color: #121212;
+	--form-border: #28231d;
 	--text-primary: #eee;
 	--text-secondary: rgba(63, 195, 128, 1);
 	--text-tetriary: #999;
@@ -81,7 +82,44 @@ p,
 label {
 	font-size: var(--normal--text-size);
 }
+/* Form */
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+}
 
+form input,
+form textarea {
+	font-size: var(--normal--text-size);
+	background-color: var(--bg-color);
+	border: 1px solid var(--form-border);
+	border-bottom: 1px solid var(--text-secondary);
+	border-radius: 5px;
+	text-indent: 0.5rem;
+	color: var(--text-primary);
+}
+
+form textarea {
+	resize: none;
+	height: 20lvh;
+}
+
+form button {
+	all: initial;
+	cursor: pointer;
+	color: var(--bg-color);
+	background-color: var(--text-secondary);
+	font-family: Karla;
+	font-size: var(--normal--text-size);
+	font-weight: bold;
+	padding: 5px 12px;
+	border-radius: 15px;
+	text-align: center;
+	width: 200px;
+	align-self: center;
+}
 /* Messages */
 .messages-container {
 	display: flex;
@@ -92,6 +130,7 @@ label {
 .message {
 	border: 2px solid var(--text-secondary);
 	padding: 10px;
+	width: 600px;
 }
 
 .username {
