@@ -4,4 +4,17 @@
 
 <body>
 	<h1>Hello world</h1>
+	<div class="messages-container">
+		<% if(messages.length) { %>
+			<% messages.forEach(message => { %>
+				<div class="message">
+					<h2 class="username"><%= message.user %></h2>
+					<p class="date"><%= message.added %></p>
+					<p class="message-body"><%= message.body %></p>
+				</div>
+			<% }) %>
+		<% } else { %>
+			<h2 class="no-messages">No messages yet!</h2>
+		<% } %>
+	</div>
 </body>

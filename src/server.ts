@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import url from 'url';
 import mongoose from 'mongoose';
+import Message from './models/message.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -30,6 +31,9 @@ app.use(express.static(path.join(ROOT, 'public')));
 app.use(express.urlencoded({extended: true }));
 
 app.get('/', (_req: express.Request, res: express.Response) => {
-	res.render('index', {title: 'Welcome'});
+	Message.find().then(result => {
+		res.render('index', {title: 'Welcome', messages: result});
+	}).catch(error => {
+		console.log(error);
+	});
 });
-
