@@ -61,10 +61,16 @@ body {
 	background-color: var(--bg-color);
 	color: var(--text-primary);
 	font-family: Karla;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
 }
 
 h1 {
 	font-size: var(--biggest-text-size);
+	padding-top: 30px;
 }
 
 h2 {
