@@ -15,8 +15,10 @@ const MONGOURL = '' //TODO
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
 app.get('/', (_req: express.Request, res: express.Response) => {
-	res.send(PORT);
+	res.render('index', {title: 'Welcome'});
 });
 
 app.listen(PORT, () => console.log(runningMessage));
