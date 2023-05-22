@@ -48,3 +48,7 @@ app.post('/new', (req: express.Request, res: express.Response) => {
 		console.log(error);
 	});
 });
+
+app.use( (req: express.Request, res: express.Response) => {
+	res.redirect('/');
+});
