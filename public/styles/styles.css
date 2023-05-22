@@ -83,6 +83,17 @@ label {
 }
 
 /* Messages */
+.messages-container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.message {
+	border: 2px solid var(--text-secondary);
+	padding: 10px;
+}
+
 .username {
 	color: var(--text-secondary);
 }
