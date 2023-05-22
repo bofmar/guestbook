@@ -25,6 +25,7 @@ app.listen(PORT, () => console.log(runningMessage));
 
 app.set('view engine', 'ejs');
 
+// Serve static files
 app.use(express.static(path.join(ROOT, 'public')));
 app.use(express.urlencoded({extended: true }));
 
