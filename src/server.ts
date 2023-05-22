@@ -31,7 +31,7 @@ app.use(express.static(path.join(ROOT, 'public')));
 app.use(express.urlencoded({extended: true }));
 
 app.get('/', (_req: express.Request, res: express.Response) => {
-	Message.find().then(result => {
+	Message.find().sort({added: -1}).then(result => {
 		res.render('index', {title: 'Welcome', messages: result});
 	}).catch(error => {
 		console.log(error);
