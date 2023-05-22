@@ -49,6 +49,7 @@ app.post('/new', (req: express.Request, res: express.Response) => {
 	});
 });
 
-app.use( (req: express.Request, res: express.Response) => {
+// if the user tries to access a route that does not exist, redirect the to the root
+app.use( (_req: express.Request, res: express.Response) => {
 	res.redirect('/');
 });
