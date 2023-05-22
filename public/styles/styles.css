@@ -1,0 +1,86 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Variables */
+:root {
+	--bg-color: #121212;
+	--text-primary: #eee;
+	--text-secondary: rgba(63, 195, 128, 1);
+	--text-tetriary: #999;
+
+	--small-text-size: 12px;
+	--normal--text-size: 18px;
+	--big-text-size: 26px;
+	--biggest-text-size: 32px;
+}
+
+/* Globals */
+body {
+	background-color: var(--bg-color);
+	color: var(--text-primary);
+	font-family: Karla;
+}
+
+h1 {
+	font-size: var(--biggest-text-size);
+}
+
+h2 {
+	font-size: var(--big-text-size);
+}
+
+p,
+label {
+	font-size: var(--normal--text-size);
+}
+
+/* Messages */
+.username {
+	color: var(--text-secondary);
+}
+
+.date {
+	color: var(--text-tetriary);
+}

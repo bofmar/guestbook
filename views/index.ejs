@@ -17,8 +17,8 @@
 			<% messages.forEach(message => { %>
 				<div class="message">
 					<h2 class="username"><%= message.user %></h2>
-					<p class="date"><%= message.added %></p>
 					<p class="message-body"><%= message.body %></p>
+					<p class="date"><%= message.added %></p>
 				</div>
 			<% }) %>
 		<% } else { %>
