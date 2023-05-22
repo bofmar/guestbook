@@ -37,3 +37,14 @@ app.get('/', (_req: express.Request, res: express.Response) => {
 		console.log(error);
 	});
 });
+
+app.post('/new', (req: express.Request, res: express.Response) => {
+	const message = new Message(req.body);
+	message.added = new Date;
+	message.save().then(result => {
+		console.log(result);
+		res.redirect('/');
+	}).catch(error => {
+		console.log(error);
+	});
+});

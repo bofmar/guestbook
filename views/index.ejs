@@ -4,6 +4,13 @@
 
 <body>
 	<h1>Hello world</h1>
+	<form method="POST" action="/new">
+		<label for="user">Name:</label>
+		<input type="text" id="user" name="user" />
+		<label for="body">Message:</label>
+		<textarea id="body" name="body" ></textarea>
+		<button>Send</button>
+	</form>
 	<div class="messages-container">
 		<% if(messages.length) { %>
 			<% messages.forEach(message => { %>
